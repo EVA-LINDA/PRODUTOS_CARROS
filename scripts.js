@@ -1,22 +1,38 @@
 let prevButton = document.getElementById('prev')
 let nextButton = document.getElementById('next')
-let container = document.querySelector('.container') // ou use getElementById se for id
+let container = document.querySelector('.container')
 let items = container.querySelectorAll('.list .item')
 let indicator = document.querySelector('.indicators')
 let dots = indicator.querySelectorAll('ul li')
 
 let active = 0
-let firsPosition = items.length - 1
+let lastPosition = items.length - 1
 
-nextButton.onclick = () => {
+function setSlider(){
     let itemOld = container.querySelector('.list .item.active')
     itemOld.classList.remove('active')
 
-    active = active + 1 > lastPosition ? 0 : active + 1
-    items[active].classList.add('active')
-}  
+    let dotsOld = indicator.querySelector('ul li.active')
+    dotsOld.classList.remove('active')
+    dots[active].classList.add('active')
 
+    indicator.querySelector('.number').innerHTML = "0" + (active + 1)
+
+    
+}
+
+nextButton.onclick = () => {
+
+    active = active + 1 > lastPosition ? 0 : active + 1
+    setSlider()
+    items[active].classList.add('active')
+
+    
+
+}
 
 prevButton.onclick = () => {
-    console.log("botão prev")
+    active = active - 1 < 0 ? lastPosition : active - 1
+    setSlider()
+    items[active].classList.add('active')
 }
