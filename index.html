@@ -9,6 +9,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>BMW</title>
 </head>
@@ -26,9 +31,10 @@
         </nav>
     </header>
 
-    <section>
+    <section class="container">
         <div class="list">
-            <div class="item">
+
+            <div class="item active">
                 <div class="car-img">
                     <img src="bmw1.jpeg.png" alt="imagem carro">
                 </div>
@@ -38,12 +44,51 @@
                     </p>
 
                     <h2>
-                        bmw
+                       ADRO M4 
                     </h2>
                     <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni, voluptatibus dicta
-                        excepturi deleniti minus rerum nobis dolorem non ipsa, dolorum odio iusto odit quas! Maiores
-                        amet harum est minima.
+                        Caracterizado por uma velocidade máxima de 302 km/h, 
+                        o M4 CS é uma das versões de alta performance da BMW.
+                    </p>
+                    <button class="information">saiba mais</button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="car-img">
+                    <img src="bmw2.png.png" alt="imagem carro">
+                </div>
+                <div class="content">
+                    <p class="car-information">
+                        Unico dono
+                    </p>
+
+                    <h2>
+                        Bmw m4
+                    </h2>
+                    <p class="description">
+                        A potência varia entre os 250 kW (340 cv) no BMW M440d 
+                        xDrive e uns poderosos 405 (551 cv) no BMW M4 CS.
+                    </p>
+                    <button class="information">saiba mais</button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="car-img">
+                    <img src="bmw3-removebg-preview.png" alt="imagem carro">
+                </div>
+                <div class="content">
+                    <p class="car-information">
+                        Unico dono
+                    </p>
+
+                    <h2>
+                        A clean Crystal Pearl White BMW i8
+                    </h2>
+                    <p class="description">
+                         O modelo é comercializado em 2 versões: cupê e conversível. Ambas munidas por um 
+                         motor a combustão e
+                         outro elétrico, que juntos entregam 374 cavalos e 
+                         42 kgfm de torque. O câmbio é automático e a tração 4x4.
                     </p>
                     <button class="information">saiba mais</button>
                 </div>
@@ -51,8 +96,8 @@
         </div>
 
         <div class="arrows">
-            <button><img src="arrow2.jpeg" alt="seta esquesta"></button>
-            <button><img src="arrow2.jpeg" alt="seta dieita"></button>
+            <button id="prev"><img src="arrow2.jpeg" alt="seta esquesta"></button>
+            <button id="next"><img src="arrow2.jpeg" alt="seta dieita"></button>
         </div>
 
         <div class="indicators">
@@ -65,7 +110,7 @@
 
         </div>
     </section>
-
+    <script src="scripts.js"></script>
 
 </body>
 
